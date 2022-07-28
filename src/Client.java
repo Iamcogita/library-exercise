@@ -8,6 +8,9 @@ public class Client {
 
     public Book[] heldBooks = new Book[4];
     private String clientName;
+    public boolean getHasDonated() {
+        return hasDonated;
+    }
 
     Client(String clientName){
         this.clientName = clientName;
@@ -65,8 +68,10 @@ public class Client {
         return null;
     }
 
-    public boolean donateBook(Library libraryName){
-        tradeLib.setClientDonated(true);
+    public boolean donateBook(TradeLibrary libraryName) throws NotInsideLibraryException {
+        validateLibrary();
+        System.out.println(getClientName() + " donated a book.");
+        libraryName.clientDonated = true;
         return hasDonated = true;
     }
 

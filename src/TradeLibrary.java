@@ -1,10 +1,13 @@
 public class TradeLibrary extends Library{
+
+    private Client client;
     boolean clientDonated = false;
     public TradeLibrary(String name, int numberOfBooks){
         super(name,numberOfBooks);
         this.clientDonated = clientDonated;
     }
     public boolean setClientDonated(boolean clientDonated) {
+        if( client.getHasDonated() == true )
         this.clientDonated = clientDonated;
         return clientDonated;
     }

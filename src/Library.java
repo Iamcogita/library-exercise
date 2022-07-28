@@ -64,6 +64,8 @@ public abstract class Library {
         return null;
     }
     public void showInventory(){
+        System.out.println("\n"+ this.getLibraryName() + " inventory:" );
+        System.out.println("------------------------");
         for ( Book books : ownedBooks ) {
             System.out.println(books.getBookTitle() + " by: " + books.getAuthorName());
         }
