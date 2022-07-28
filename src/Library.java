@@ -20,6 +20,7 @@ public abstract class Library {
             ownedBooks = doubleSpaces(ownedBooks);
         }
         ownedBooks[numOfBooksOwned] = new Book( authorName , bookTitle, this );
+        System.out.printf("%s ordered %s by %s \n" , this.getLibraryName() , bookTitle , authorName);
         numOfBooksOwned++;
     }
 
@@ -69,5 +70,6 @@ public abstract class Library {
         for ( Book books : ownedBooks ) {
             System.out.println(books.getBookTitle() + " by: " + books.getAuthorName());
         }
+        System.out.println("------------------------");
     }
 }

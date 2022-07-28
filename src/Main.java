@@ -13,6 +13,9 @@ public class Main {
         try {client1.borrowBookByAuthor("Richard Dawkins");}
         catch (NotInsideLibraryException e) {throw new RuntimeException(e);}
 
+        try {client1.borrowBookByTitle("Fountain Head");}
+        catch (NotInsideLibraryException e) {throw new RuntimeException(e);}
+
         try {client1.giveBackBook("Richard Dawkins");}
         catch (NotInsideLibraryException e) {throw new RuntimeException(e);}
 
